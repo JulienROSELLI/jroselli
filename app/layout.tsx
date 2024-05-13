@@ -1,5 +1,6 @@
+import Navbar from '@/components/NavBar'
 import { Layout } from '@/components/dom/Layout'
-import '@/global.css'
+import '@/app/globals.css'
 
 export const metadata = {
   title: 'Next.js + Three.js',
