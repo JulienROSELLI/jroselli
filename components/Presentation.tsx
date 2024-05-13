@@ -7,7 +7,7 @@ import { SectionWrapper } from '@/hoc'
 const Presentation = () => {
   return (
     <SectionCard
-      className='mt-[5.25rem] w-full pt-48 '
+      className=' w-full  pt-20'
       crosses
       crossesOffset='lg:translate-y-[5.25rem]'
       customPaddings=''

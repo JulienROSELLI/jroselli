@@ -19,6 +19,8 @@ const ExperienceCard: React.ElementType = ({
     contentStyle={{
       background: '#1d1836',
       color: '#fff',
+      padding: '2.5rem',
+      margin: 0,
     }}
     contentArrowStyle={{ borderRight: '7px solid  #232631' }}
     date={date}
@@ -36,7 +38,7 @@ const ExperienceCard: React.ElementType = ({
       </p>
     </div>
 
-    <ul className='ml-5 mt-5 list-disc space-y-2'>
+    <ul className=' list-disc space-y-2'>
       {desciption.map((point, index) => (
         <li key={`experience-point-${index}`} className='pl-1 text-[14px] tracking-wider text-white'>
           {point}
@@ -49,7 +51,7 @@ const ExperienceCard: React.ElementType = ({
 export const Carriere = () => {
   return (
     <SectionCard
-      className='mt-[5.25rem] w-full pt-48 '
+      className=' w-full  pt-24'
       crosses
       crossesOffset='lg:translate-y-[5.25rem]'
       customPaddings=' '
@@ -60,15 +62,13 @@ export const Carriere = () => {
         paragraphe="Apres 15 ans d'hotellerie la chance m'a permi de trouver le developpement informatique une passion depuis toujours"
       />
 
-      <div className='container relative'>
-        <div className='relative z-1 mx-auto mb-[3.875rem] max-w-[62rem] text-center md:mb-20 lg:mb-[6.25rem]'>
-          <div className='mt-20 flex flex-col '>
-            <VerticalTimeline className=''>
-              {experiences.map((experience: objectExperience) => (
-                <ExperienceCard key={`experience-${experience.id}`} experience={experience} />
-              ))}
-            </VerticalTimeline>
-          </div>
+      <div className='container relative z-1 m-0  p-10 text-center'>
+        <div className=' flex flex-col items-center justify-center'>
+          <VerticalTimeline className='m-0'>
+            {experiences.map((experience: objectExperience) => (
+              <ExperienceCard key={`experience-${experience.id}`} experience={experience} />
+            ))}
+          </VerticalTimeline>
         </div>
       </div>
     </SectionCard>

@@ -17,6 +17,9 @@ importers:
       '@react-three/fiber':
         specifier: ^8.15.12
         version: 8.16.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.160.1)
+      '@types/react-vertical-timeline-component':
+        specifier: ^3.3.6
+        version: 3.3.6
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -1150,6 +1153,9 @@ packages:
 
   '@types/react-reconciler@0.28.8':
     resolution: {integrity: sha512-SN9c4kxXZonFhbX4hJrZy37yw9e7EIxcpHCxQv5JUS18wDE5ovkQKlqQEkufdJCCMfuI9BnjUJvhYeJ9x5Ra7g==}
+
+  '@types/react-vertical-timeline-component@3.3.6':
+    resolution: {integrity: sha512-OUvyPXRjXvUD/SNLO0CW0GbIxVF32Ios5qHecMSfw6kxnK1cPULD9NV80EuqZ3WmS/s6BgbcwmN8k4ISb3akhQ==}
 
   '@types/react@18.3.2':
     resolution: {integrity: sha512-Btgg89dAnqD4vV7R3hlwOxgqobUQKgx3MmrQRi0yYbs/P0ym8XozIAlkqVilPqHQwXs4e9Tf63rrCgl58BcO4w==}
@@ -4707,6 +4713,10 @@ snapshots:
       '@types/react': 18.3.2
 
   '@types/react-reconciler@0.28.8':
+    dependencies:
+      '@types/react': 18.3.2
+
+  '@types/react-vertical-timeline-component@3.3.6':
     dependencies:
       '@types/react': 18.3.2
 

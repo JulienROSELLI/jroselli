@@ -1,17 +1,19 @@
 import { PlusSvg } from '@/assets/svg/SvgLib'
+import { slideIn } from '@/utils/motion'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const SectionSvg = ({ crossesOffset }: { crossesOffset?: string }) => {
   return (
     <>
       <PlusSvg
-        className={`absolute left-[1.5625rem] top-[0.3125rem] hidden ${
+        className={`absolute left-[1.5625rem] top-[-5px] hidden ${
           crossesOffset && crossesOffset
         } pointer-events-none lg:block xl:left-[2.1875rem]`}
       />
 
       <PlusSvg
-        className={`absolute right-[1.5625rem]  top-[0.3125rem] hidden ${
+        className={`absolute right-[1.5625rem]  top-[-5px] hidden ${
           crossesOffset && crossesOffset
         } pointer-events-none lg:block xl:right-[2.1875rem]`}
       />
@@ -33,7 +35,7 @@ export const SectionCard = ({ children, className, id, crosses, crossesOffset, c
       id={id}
       className={`
   relative 
-  ${customPaddings || `py-10 lg:py-16 xl:py-20 ${crosses ? 'lg:py-32 xl:py-40' : ''}`} 
+  ${customPaddings || `py-10 lg:pb-10 xl:py-20 ${crosses ? 'lg:pb-10 xl:py-24' : ''}`} 
   ${className || ''}`}
     >
       {children}

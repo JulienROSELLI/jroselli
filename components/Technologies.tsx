@@ -12,12 +12,7 @@ import Ball from './canvas/TechCanvas'
 
 const Technologies = () => {
   return (
-    <SectionCard
-      className='mt-[5.25rem] w-full pt-24 '
-      crosses
-      crossesOffset='lg:translate-y-[5.25rem]'
-      customPaddings=' '
-    >
+    <SectionCard className=' w-full pt-24 ' crosses crossesOffset='lg:translate-y-[5.25rem]' customPaddings=' '>
       <div className='flex flex-col gap-4'>
         <SectionHeaders
           titre='Langages et frameworks'

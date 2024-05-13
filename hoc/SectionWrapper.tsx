@@ -10,11 +10,11 @@ const StarWrapper = (Component: React.ElementType, idName: string) =>
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 0.25 }}
-        className={` relative z-0 mx-auto w-full`}
+        className={` relative z-0 w-full`}
       >
-        <span className='hash-span' id={idName}>
+        {/* <span className='hash-span' id={idName}>
           &nbsp;
-        </span>
+        </span> */}
 
         <Component />
       </motion.section>
