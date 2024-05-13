@@ -6,7 +6,8 @@
 // 2 - add <ScrollTicker /> wherever in the canvas
 // 3 - enjoy
 import { addEffect, useFrame } from '@react-three/fiber'
-import Lenis from '@studio-freight/lenis'
+import Lenis from 'lenis'
+
 import { useEffect } from 'react'
 import { useRef } from 'react'
 import * as THREE from 'three'
@@ -27,11 +28,11 @@ export default function Scroll({ children }) {
       wrapper: wrapper.current,
       content: content.current,
       duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-      direction: 'vertical', // vertical, horizontal
-      gestureDirection: 'vertical', // vertical, horizontal, both
-      smooth: true,
-      smoothTouch: false,
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+      orientation: 'vertical', // vertical, horizontal
+      gestureOrientation: 'vertical', // vertical, horizontal, both
+      smoothWheel: true,
+      syncTouch: false,
       touchMultiplier: 2,
       infinite: false,
     })
@@ -56,13 +57,15 @@ export default function Scroll({ children }) {
         width: '100%',
         height: '100%',
         top: 0,
-      }}>
+      }}
+    >
       <div
         ref={content}
         style={{
           position: 'relative',
           minHeight: '200vh',
-        }}>
+        }}
+      >
         {children}
       </div>
     </div>
