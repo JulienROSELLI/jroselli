@@ -16,7 +16,13 @@ export const Common = ({ color }: { color?: string }) => (
 
 const View = forwardRef(
   (
-    { children, orbit, className, ...props }: { orbit?: boolean; children: React.ReactNode; className?: string },
+    {
+      children,
+      orbit,
+      className,
+      customStyle,
+      ...props
+    }: { orbit?: boolean; children: React.ReactNode; className?: string; customStyle?: React.CSSProperties },
     ref,
   ): JSX.Element => {
     const localRef = useRef(null)
@@ -24,7 +30,7 @@ const View = forwardRef(
 
     return (
       <>
-        <div ref={localRef} {...props} className={className} />
+        <div ref={localRef} {...props} className={className} style={customStyle} />
         <Three>
           <ViewImpl track={localRef}>
             {children}

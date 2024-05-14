@@ -13,6 +13,7 @@ import css from './techs/css.png'
 import git from './techs/git.png'
 import html from './techs/html.png'
 import javascript from './techs/javascript.png'
+import grafana from './techs/grafana_icon.svg'
 
 import bash from './techs/bash.png'
 import couchdb from './techs/couchdb.png'
@@ -35,6 +36,7 @@ import tailwind from './techs/tailwind.png'
 import typescript from './techs/typescript.png'
 
 import bootstrap from './techs/bootstrap.png'
+import db from './techs/db.png'
 
 export {
   logo,
@@ -68,4 +70,6 @@ export {
   powershell,
   nodejs,
   reactjs,
+  grafana,
+  db,
 }

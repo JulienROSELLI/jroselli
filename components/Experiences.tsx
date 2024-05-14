@@ -20,7 +20,6 @@ const ExperienceCard: React.ElementType = ({
       background: '#1d1836',
       color: '#fff',
       padding: '2.5rem',
-      margin: 0,
     }}
     contentArrowStyle={{ borderRight: '7px solid  #232631' }}
     date={date}
@@ -61,14 +60,15 @@ export const Carriere = () => {
         titre='Carrière'
         paragraphe="Apres 15 ans d'hotellerie la chance m'a permi de trouver le developpement informatique une passion depuis toujours"
       />
-
-      <div className='container relative z-1 m-0  p-10 text-center'>
-        <div className=' flex flex-col items-center justify-center'>
-          <VerticalTimeline className='m-0'>
-            {experiences.map((experience: objectExperience) => (
-              <ExperienceCard key={`experience-${experience.id}`} experience={experience} />
-            ))}
-          </VerticalTimeline>
+      <div className='flex flex-col items-center justify-center'>
+        <div className='container relative z-1 m-0  p-10 text-center'>
+          <div className=' flex flex-col items-center justify-center'>
+            <VerticalTimeline className=''>
+              {experiences.map((experience: objectExperience) => (
+                <ExperienceCard key={`experience-${experience.id}`} experience={experience} />
+              ))}
+            </VerticalTimeline>
+          </div>
         </div>
       </div>
     </SectionCard>

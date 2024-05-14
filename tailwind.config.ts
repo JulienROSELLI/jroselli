@@ -2,7 +2,15 @@ import type { Config } from 'tailwindcss'
 
 const config = {
   darkMode: ['class'],
-  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './assets/**/*.{js,ts,jsx,tsx}',
+  ],
   prefix: '',
   theme: {
     container: {
@@ -134,10 +142,16 @@ const config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
-      // backgroundImage: {
-      //   'hero-pattern': "url('/herobg.png')",
-
-      // },
+      backgroundImage: {
+        'radial-gradient': 'radial-gradient(var(--tw-gradient-stops))',
+        'conic-gradient': 'conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)',
+        'border-gradient-1': 'url(../assets/borderGradient/card-1.svg)',
+        'border-gradient-2': 'url(../assets/borderGradient/card-2.svg)',
+        'border-gradient-3': 'url(../assets/borderGradient/card-3.svg)',
+        'border-gradient-4': 'url(../assets/borderGradient/card-4.svg)',
+        'border-gradient-5': 'url(../assets/borderGradient/card-5.svg)',
+        'border-gradient-6': 'url(../assets/borderGradient/card-6.svg)',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

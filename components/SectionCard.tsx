@@ -2,6 +2,7 @@ import { PlusSvg } from '@/assets/svg/SvgLib'
 import { slideIn } from '@/utils/motion'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { cn } from '@/lib/utils'
 
 const SectionSvg = ({ crossesOffset }: { crossesOffset?: string }) => {
   return (
@@ -30,14 +31,10 @@ type sectionProps = {
   customPaddings?: string
 }
 export const SectionCard = ({ children, className, id, crosses, crossesOffset, customPaddings }: sectionProps) => {
+  let classes = `${className} ${customPaddings || 'py-10 lg:pb-10 xl:py-20'} ${crosses ? 'lg:pb-10 xl:py-24' : ''}`
+
   return (
-    <div
-      id={id}
-      className={`
-  relative 
-  ${customPaddings || `py-10 lg:pb-10 xl:py-20 ${crosses ? 'lg:pb-10 xl:py-24' : ''}`} 
-  ${className || ''}`}
-    >
+    <div id={id} className={cn('relative', classes)}>
       {children}
 
       <div className='pointer-events-none absolute left-5 top-0 hidden h-full w-0.25 bg-stroke-1 md:block lg:left-7.5 xl:left-10' />
