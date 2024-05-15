@@ -1,8 +1,8 @@
-import { PlusSvg } from '@/assets/svg/SvgLib'
-import { slideIn } from '@/utils/motion'
-import React from 'react'
-import { motion } from 'framer-motion'
-import { cn } from '@/lib/utils'
+import { PlusSvg } from "@/assets/svg/SvgLib";
+import { slideIn } from "@/utils/motion";
+import React from "react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const SectionSvg = ({ crossesOffset }: { crossesOffset?: string }) => {
   return (
@@ -19,27 +19,38 @@ const SectionSvg = ({ crossesOffset }: { crossesOffset?: string }) => {
         } pointer-events-none lg:block xl:right-[2.1875rem]`}
       />
     </>
-  )
-}
+  );
+};
 
 type sectionProps = {
-  children?: React.ReactNode
-  className?: string
-  id?: string
-  crosses?: boolean
-  crossesOffset?: string
-  customPaddings?: string
-}
-export const SectionCard = ({ children, className, id, crosses, crossesOffset, customPaddings }: sectionProps) => {
-  let classes = `${className} ${customPaddings || 'py-10 lg:pb-10 xl:py-20'} ${crosses ? 'lg:pb-10 xl:py-24' : ''}`
+  children?: React.ReactNode;
+  className?: string;
+  id?: string;
+  crosses?: boolean;
+  crossesOffset?: string;
+  customPaddings?: string;
+};
+export const SectionCard = ({
+  children,
+  className,
+  id,
+  crosses,
+  crossesOffset,
+  customPaddings
+}: sectionProps) => {
+  let classes = `${className} ${customPaddings || "lg:pb-10 xl:py-20"} ${crosses ? "lg:pb-10 xl:py-24" : ""}`;
 
   return (
-    <div id={id} className={cn('relative', classes)}>
-      {children}
-
+    <div
+      id={id}
+      className={cn(
+        "relative flex flex-col items-center justify-start",
+        classes
+      )}
+    >
+      <div className=' w-[95%] '>{children}</div>
       <div className='pointer-events-none absolute left-5 top-0 hidden h-full w-0.25 bg-stroke-1 md:block lg:left-7.5 xl:left-10' />
       <div className='pointer-events-none absolute right-5 top-0 hidden h-full w-0.25 bg-stroke-1 md:block lg:right-7.5 xl:right-10' />
-
       {crosses && (
         <>
           <div
@@ -51,5 +62,5 @@ export const SectionCard = ({ children, className, id, crosses, crossesOffset, c
         </>
       )}
     </div>
-  )
-}
+  );
+};

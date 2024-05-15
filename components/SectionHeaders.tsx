@@ -1,16 +1,26 @@
-'use client'
-import React from 'react'
+"use client";
+import React from "react";
 
-import { textVariant } from '@/utils/motion'
-import { motion } from 'framer-motion'
+import { fadeIn, textVariant } from "@/utils/motion";
+import { motion } from "framer-motion";
+import { objectDataCards } from "@/constants";
+import brackets from "@/assets/svg/Brackets";
+import { curlyBackets } from "@/assets/svg/curlyBrackets";
 
-export const SectionHeaders = ({ titre, paragraphe }: { titre: string; paragraphe: string }) => {
+export const SectionHeaders = ({ titre, texte }: objectDataCards) => {
   return (
-    <motion.div variants={textVariant()}>
-      <h1 className='xs:text-[40px] px-6  text-[30px]  text-white sm:px-16  sm:text-[40px] md:text-[45px]'>{titre}</h1>
-      <p className='px-6 text-[14px]  tracking-wider text-secondary sm:px-16 sm:text-[18px] xl:text-2xl'>
-        {paragraphe}
-      </p>
-    </motion.div>
-  )
-}
+    // <motion.div variants={textVariant()}>
+    <div className='z-5 flex flex-wrap  font-code'>
+      <span className='xs:text-[40px] p-2  text-2xl  leading-10  text-blue-600  sm:text-[40px] md:text-[45px]'>
+        <span className=' text-4xl text-green-600'>{"{"}</span> {`${titre}`}
+        <span className=' text-white'>{' : " '}</span>
+        <span className='  text-base  tracking-wider text-secondary sm:text-[18px] xl:text-2xl'>
+          {`${texte} `}
+          <span className='text-2xl text-white'>{'"'}</span>
+          <span className='text-4xl text-green-600'>{" }"}</span>
+        </span>
+      </span>
+    </div>
+    // </motion.div>
+  );
+};
