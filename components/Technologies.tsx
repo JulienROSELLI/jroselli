@@ -15,7 +15,7 @@ import StarsCanvas from "./canvas/Stars";
 
 const Technologies = () => {
   let { titre, texte } = dataTecnologies;
-  let [isAnimated, setIsAnimated] = React.useState<boolean>(true);
+  let [isAnimated, setIsAnimated] = React.useState<boolean>(false);
 
   return (
     <SectionCard
