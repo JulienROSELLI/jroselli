@@ -1,4 +1,7 @@
+#!/bin/bash
+
 ## TODO voir pour gerer ca avec un script js dans le package.json
+#TODO ajouter une gestion d'erreur
 
 echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
 echo "|***************************************************|"
