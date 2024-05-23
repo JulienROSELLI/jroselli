@@ -17,6 +17,7 @@ const StarWrapper = (Component: React.ElementType, idName: string) =>
       //     </span> */}
 
       <Component />
+
       // </motion.section>
     );
   };

@@ -1,6 +1,7 @@
 import Navbar from "@/components/NavBar";
 import { Layout } from "@/components/dom/Layout";
 import "@/app/globals.css";
+import { ThemeProvider } from "@/components/dom/ThemeProvider";
 
 export const metadata = {
   title: "Next.js + Three.js",
@@ -9,14 +10,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' className='overflow-x-hidden antialiased'>
+    <html
+      lang='en'
+      className=' overflow-x-hidden antialiased'
+      suppressHydrationWarning
+    >
       <head />
       <body className='grid h-screen grid-rows-[auto,1fr]  '>
-        <Navbar />
-
-        <main className='pt-16'>
-          <Layout>{children}</Layout>
-        </main>
+        <ThemeProvider attribute='class' defaultTheme='light'>
+          <Navbar />
+          <main className='pt-16'>
+            <Layout>{children}</Layout>
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

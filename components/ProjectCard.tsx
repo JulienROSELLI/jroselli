@@ -3,6 +3,7 @@ import React from "react";
 
 import image from "@/public/purpleNight.jpg";
 import Image from "next/image";
+import { todoApp } from "@/assets";
 
 //TODO refaractor extraire les fonction por nettoyer ce code
 
@@ -139,7 +140,7 @@ const ProjectCard = ({
           <div className='p-4'>
             {image && (
               <Image
-                src={image}
+                src={todoApp}
                 alt={"item.title"}
                 width={300}
                 height={200}

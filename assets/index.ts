@@ -6,5 +6,6 @@ import mercure from "./logos/mercure.ico";
 import ibis from "./logos/ibis.png";
 import euroerp from "./logos/euroerp.png";
 import photo from "./photocv.jpg";
+import todoApp from "./todo.png";
 
-export { logo, photo, menu, close, accor, mercure, ibis, euroerp };
+export { logo, photo, menu, close, accor, mercure, ibis, euroerp, todoApp };

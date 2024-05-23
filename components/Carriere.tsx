@@ -8,9 +8,10 @@ import {
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { SectionCard } from "./SectionCard";
+
 import { SectionHeaders } from "./SectionHeaders";
 import { SectionWrapper } from "@/hoc";
+import CardSection from "./CardSection";
 
 const ExperienceCard: React.ElementType = ({
   experience: { date, logo, entreprise, poste, bgLogo, desciption }
@@ -22,11 +23,14 @@ const ExperienceCard: React.ElementType = ({
     // dateClassName='border'
     // iconClassName='border'
     // textClassName='border'
+    className='text-primary-foreground'
     visible
     contentStyle={{
-      background: "#1d1836",
-      color: "#fff",
-      padding: "2.5rem"
+      background: "#3b82f6",
+      color: "var(--nextui-colors-primary)",
+      padding: "1.5rem",
+
+      maxWidth: "40rem"
     }}
     contentArrowStyle={{ borderRight: "7px solid  #232631" }}
     date={date}
@@ -41,21 +45,18 @@ const ExperienceCard: React.ElementType = ({
       </div>
     }
   >
-    <div>
-      <span className='text-[24px] font-bold text-white'>{poste}</span>
-      <span
-        className='text-[16px] font-semibold text-secondary'
-        style={{ margin: 0 }}
-      >
+    <div className='flex flex-col items-center justify-between p-2 '>
+      <span className='text-[24px] font-bold '>{poste}</span>
+      <span className='text-[16px] font-semibold ' style={{ margin: 0 }}>
         {entreprise}
       </span>
     </div>
 
-    <ul className=' list-disc space-y-2'>
+    <ul className=' list-disc pl-4 '>
       {desciption.map((point, index) => (
         <li
           key={`experience-point-${index}`}
-          className='pl-1 text-[14px] tracking-wider text-white'
+          className=' text-start text-[14px] tracking-wider'
         >
           {point}
         </li>
@@ -67,17 +68,11 @@ const ExperienceCard: React.ElementType = ({
 export const Carriere = () => {
   let { titre, texte } = dataCarriere;
   return (
-    <SectionCard
-      className=' w-full'
-      crosses
-      crossesOffset='lg:translate-y-[5.25rem]'
-      customPaddings=' '
-      id='carriere'
-    >
+    <CardSection className=' flex flex-col' id='carriere'>
       <SectionHeaders titre={titre} texte={texte} />
-      <div className='flex flex-col items-center justify-center'>
-        <div className='container relative z-1 m-0  p-10 text-center'>
-          <div className=' flex flex-col items-center justify-center'>
+      <div className='flex w-full flex-col items-center justify-center'>
+        <div className='container relative z-1 m-0  p-0 text-center'>
+          <div className=' flex  flex-col items-center justify-center'>
             <VerticalTimeline className=''>
               {experiences.map((experience: objectExperience) => (
                 <ExperienceCard
@@ -89,7 +84,7 @@ export const Carriere = () => {
           </div>
         </div>
       </div>
-    </SectionCard>
+    </CardSection>
   );
 };
 

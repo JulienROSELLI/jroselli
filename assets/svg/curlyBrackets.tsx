@@ -1,6 +1,11 @@
 export const curlyBackets = (position?: "left" | "right", color = "white") =>
   position === "left" ? (
-    <svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg
+      viewBox='0 0 24 24'
+      className='fill-cyan-500 '
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
       <g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
       <g
         id='SVGRepo_tracerCarrier'
@@ -18,7 +23,12 @@ export const curlyBackets = (position?: "left" | "right", color = "white") =>
       </g>
     </svg>
   ) : (
-    <svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg
+      viewBox='0 0 24 24'
+      className='fill-cyan-500'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
       <g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
       <g
         id='SVGRepo_tracerCarrier'

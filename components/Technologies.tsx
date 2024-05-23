@@ -12,22 +12,21 @@ import Ball from "./canvas/TechCanvas";
 import { TechList } from "@/constants/techs";
 import EarthCanvas from "./canvas/Earth";
 import StarsCanvas from "./canvas/Stars";
+import CardSection from "./CardSection";
 
 const Technologies = () => {
   let { titre, texte } = dataTecnologies;
   let [isAnimated, setIsAnimated] = React.useState<boolean>(false);
 
   return (
-    <SectionCard
-      className='  w-full'
-      crosses
-      crossesOffset='lg:translate-y-[5.25rem]'
-      customPaddings=' '
-      id='technologies'
-    >
+    <CardSection className='   bg-dark-1 dark:bg-muted' id='technologies'>
       <div className=' flex flex-col gap-4'>
         <SectionHeaders titre={titre} texte={texte} />
-        <Button variant='outline' onClick={() => setIsAnimated(!isAnimated)}>
+        <Button
+          className='z-2'
+          variant='outline'
+          onClick={() => setIsAnimated(!isAnimated)}
+        >
           Animation
         </Button>
         {!isAnimated ? (
@@ -105,7 +104,7 @@ const Technologies = () => {
           </>
         )}
       </div>
-    </SectionCard>
+    </CardSection>
   );
 };
 
