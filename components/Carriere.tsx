@@ -23,11 +23,11 @@ const ExperienceCard: React.ElementType = ({
     // dateClassName='border'
     // iconClassName='border'
     // textClassName='border'
-    className='text-primary-foreground'
+    className='text-muted-foreground'
     visible
     contentStyle={{
       background: "#3b82f6",
-      color: "var(--nextui-colors-primary)",
+
       padding: "1.5rem",
 
       maxWidth: "40rem"
@@ -45,14 +45,14 @@ const ExperienceCard: React.ElementType = ({
       </div>
     }
   >
-    <div className='flex flex-col items-center justify-between p-2 '>
+    <div className='flex flex-col items-center justify-between p-2 text-primary-foreground '>
       <span className='text-[24px] font-bold '>{poste}</span>
       <span className='text-[16px] font-semibold ' style={{ margin: 0 }}>
         {entreprise}
       </span>
     </div>
 
-    <ul className=' list-disc pl-4 '>
+    <ul className=' list-disc pl-4 text-primary-foreground'>
       {desciption.map((point, index) => (
         <li
           key={`experience-point-${index}`}
