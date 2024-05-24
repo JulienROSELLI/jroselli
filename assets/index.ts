@@ -7,5 +7,17 @@ import ibis from "./logos/ibis.png";
 import euroerp from "./logos/euroerp.png";
 import photo from "./photocv.jpg";
 import todoApp from "./todo.png";
+import recipe from "./recipe.png";
 
-export { logo, photo, menu, close, accor, mercure, ibis, euroerp, todoApp };
+export {
+  logo,
+  photo,
+  menu,
+  close,
+  accor,
+  mercure,
+  ibis,
+  euroerp,
+  todoApp,
+  recipe
+};

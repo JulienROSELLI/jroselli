@@ -2,7 +2,7 @@
 import { SectionWrapper } from "@/hoc";
 
 import React from "react";
-
+import { recipe, todoApp } from "@/assets";
 import { SectionHeaders } from "./SectionHeaders";
 import ProjectCard from "./ProjectCard";
 import { dataProjets } from "@/constants";
@@ -20,6 +20,14 @@ function Projets() {
           <ProjectCard
             title='Todo'
             text='petite application de gestion de tâches'
+            thumbnail={todoApp}
+          />
+        </Link>
+        <Link href='/recettes'>
+          <ProjectCard
+            title='Recettes'
+            text='petite application pour gerer ses recettes'
+            thumbnail={recipe}
           />
         </Link>
       </div>

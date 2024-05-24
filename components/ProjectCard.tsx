@@ -2,8 +2,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 
 import image from "@/public/purpleNight.jpg";
-import Image from "next/image";
-import { todoApp } from "@/assets";
+import Image, { StaticImageData } from "next/image";
 
 //TODO refaractor extraire les fonction por nettoyer ce code
 
@@ -118,13 +117,13 @@ const ClipPath: React.FC = () => {
 const ProjectCard = ({
   title,
   text,
-  iconUrl,
+  thumbnail,
   backgroundUrl,
   tag
 }: {
   title?: string;
   text?: string;
-  iconUrl?: string;
+  thumbnail?: StaticImageData;
   backgroundUrl?: string;
   tag?: string;
 }) => {
@@ -140,7 +139,7 @@ const ProjectCard = ({
           <div className='p-4'>
             {image && (
               <Image
-                src={todoApp}
+                src={thumbnail}
                 alt={"item.title"}
                 width={300}
                 height={200}
