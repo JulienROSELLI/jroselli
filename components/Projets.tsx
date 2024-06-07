@@ -2,7 +2,7 @@
 import { SectionWrapper } from "@/hoc";
 
 import React from "react";
-import { recipe, todoApp } from "@/assets";
+import { jplante, recipe, todoApp } from "@/assets";
 import { SectionHeaders } from "./SectionHeaders";
 import ProjectCard from "./ProjectCard";
 import { dataProjets } from "@/constants";
@@ -16,18 +16,25 @@ function Projets() {
       <SectionHeaders titre={titre} texte={texte} />
 
       <div className='flex '>
-        <Link href='/todo'>
+        {/* <Link href='/todo'>
           <ProjectCard
             title='Todo'
             text='petite application de gestion de tâches'
             thumbnail={todoApp}
           />
-        </Link>
+        </Link> */}
         <Link href='/recettes'>
           <ProjectCard
             title='Recettes'
             text='petite application pour gerer ses recettes'
             thumbnail={recipe}
+          />
+        </Link>
+        <Link href='/jplante'>
+          <ProjectCard
+            title='Flechettes'
+            text='petite application pour enregistrer ses scores au flejchettes'
+            thumbnail={jplante}
           />
         </Link>
       </div>

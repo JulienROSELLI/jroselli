@@ -59,7 +59,7 @@ export const dataPresentation: objectDataCards = {
       Lucene, apache2, C, C#, React Native, Katalon ou encore python mais n’ayant jamais utilisé ces \
       outils et langage en mode production je ne peux pas prétendre les maitriser. Je suis un passioné \
       de A a Z qu'on parle de Frontend ou de backend, que l'on parle d'automatiser des processus machine \
-      ou de designe d'iterface web ou encore d'architecture de base de données. "
+      ou de design d'interface web ou encore d'architecture de base de données. "
 };
 
 export const dataCarriere: objectDataCards = {

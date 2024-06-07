@@ -133,16 +133,19 @@ const ProjectCard = ({
       style={{ backgroundImage: "url(/card-2.svg)" }}
     >
       <div className='pointer-events-none relative z-2 flex min-h-[22rem] flex-col p-[2.4rem]'>
-        <h5 className='h2 mb-5'>{title}</h5>
-        <p className='body-2 mb-6 text-n-3'>{text}</p>
+        <div className='h-32'>
+          <h5 className='h2 mb-2'>{title}</h5>
+          <p className='body-2 mb-3 text-n-3'>{text}</p>
+        </div>
         <div className='  relative flex max-h-20 w-60 flex-col items-center'>
-          <div className='p-4'>
+          <div className='p-2'>
             {image && (
               <Image
                 src={thumbnail}
                 alt={"item.title"}
+                style={{ objectFit: "contain" }}
                 width={300}
-                height={200}
+                height={150}
                 className=' '
               />
             )}

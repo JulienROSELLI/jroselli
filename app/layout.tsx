@@ -4,8 +4,9 @@ import "@/app/globals.css";
 import { ThemeProvider } from "@/components/dom/ThemeProvider";
 
 export const metadata = {
-  title: "Next.js + Three.js",
-  description: "A minimal starter for Nextjs + React-three-fiber and Threejs."
+  title: "Mon Cv",
+  description: "Une simple page pour me presenter",
+  icons: [{ rel: "icon", url: "/logo/j.png" }]
 };
 
 export default function RootLayout({ children }) {

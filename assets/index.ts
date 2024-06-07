@@ -8,9 +8,10 @@ import euroerp from "./logos/euroerp.png";
 import photo from "./photocv.jpg";
 import todoApp from "./todo.png";
 import recipe from "./recipe.png";
-
+import jplante from "./jplante.png";
 export {
   logo,
+  jplante,
   photo,
   menu,
   close,
